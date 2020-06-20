@@ -22,7 +22,7 @@
 
 using namespace std;
 
-int main()
+int MapTest()
 {
 	// 宣告
 	map<string, int> mymap;
@@ -49,10 +49,6 @@ int main()
 	// 尋訪
 	for (map<string, int>::iterator it = mymap.begin(); it != mymap.end(); ++it)
 		cout << it->first << " => " << it->second << '\n';
-
-
-
-
 
 	return 0;
 }
