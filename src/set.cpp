@@ -17,39 +17,35 @@ using namespace std;
 int SetTest()
 {
 	int value = 0;
-
-	// �ŧi
 	int myints[] = { 75,23,65,42,13 };
+	
+	// 宣告
 	std::set<int> myset(myints, myints + 5);
-	// �ŧi���N��
+	// 疊代器宣告
 	set<int>::iterator iter;
 
-	// ���J
+	// 插入
 	myset.insert(value);
 
-	
-	// �R��
-	iter = myset.find(value);//���Ȫ�^�Ӥ������N���A�S�Ȫ�^set.end()
+	// 查找
+	iter = myset.find(value);
 	myset.erase(iter);
 
-
-	// �M�X
+	// 尋訪
 	for (set<int>::iterator it = myset.begin(); it != myset.end(); it++)
 		cout << *it << endl;
 
 
-
-
 	/* -------------------- */
 
-	//�P�_�O�_����
-	bool empty = myset.empty(); //1 ���� set ����
+	// 宣告
+	bool empty = myset.empty(); 
 
 	int num = myset.size();
 
-	myset.clear();//�M��
+	myset.clear();
 
-	cout << myset.count(value) << endl;//������=1
+	cout << myset.count(value) << endl;
 
 	return 0;
 }
